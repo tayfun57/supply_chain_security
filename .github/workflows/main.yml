@@ -25,7 +25,7 @@ jobs:
         syft docker.io/kodekloud/webapp-color:latest -o SPDX-JSON > spdx.json
 
     - name: Upload SBOM Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v3
       with:
         name: sbom-report
         path: spdx.json
